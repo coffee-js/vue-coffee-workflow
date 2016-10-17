@@ -1,0 +1,22 @@
+{
+  "name": "vue-coffee-workflow",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jiyinyiyong",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "vue": "^2.0.3"
+  },
+  "devDependencies": {
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.11.1",
+    "stir-template": "^0.1.6",
+    "vue-server-renderer": "^2.0.3",
+    "webpack": "^1.13.2"
+  }
+}
