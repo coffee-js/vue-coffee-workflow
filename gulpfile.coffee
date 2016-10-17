@@ -12,6 +12,7 @@ gulp.task 'html', (cb) ->
     else cb()
 
 gulp.task 'ssr', (cb) ->
+  process.env.VUE_ENV = 'server'
   Vue = require 'vue'
   renderer = require('vue-server-renderer').createRenderer()
   Container = require './src/comp/container'
