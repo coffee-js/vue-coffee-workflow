@@ -17,6 +17,7 @@
   "devDependencies": {
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.11.1",
+    "mkpath": "^1.0.0",
     "stir-template": "^0.1.6",
     "vue-server-renderer": "^2.0.3",
     "webpack": "^1.13.2"
