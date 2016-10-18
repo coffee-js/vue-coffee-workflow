@@ -1,14 +1,17 @@
 
 Vue = require 'vue'
 
+Panel = require './panel'
+
 module.exports = Vue.component 'container',
   props: {}
+  components:
+    panel: Panel
   render: (h) ->
     h 'div', attrs: {id: 'app'}, [
       h 'div', [
-        'container inside'
+        'app!'
       ]
-      h 'div', [
-        'main.coffee'
-      ]
+      h 'panel'
+      h 'router-view', class: 'view'
     ]
