@@ -9,6 +9,8 @@ The goal is to find a eas solution to render HTML during building.
 
 ### Usage
 
+* Develop
+
 ```bash
 gulp ssr
 webpack-dev-server --hot --inline
@@ -24,13 +26,21 @@ build/page/a.html
 build/page/b.html
 ```
 
+* Build for production
+
+```bash
+webpack --config webpack-build.config.coffee
+webpack --config webpack.server.coffee
+env=prod gulp ssr
+```
+
 ### TODO
 
 Still need works on:
 
 * [x] build with revisions
+* [x] support `*.vue` files and build code
 * [ ] hot code swapping
-* [ ] migrate to `*.vue` files and build code
 
 ### License
 

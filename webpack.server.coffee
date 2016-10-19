@@ -1,10 +1,15 @@
 
+webpack = require 'webpack'
+
 module.exports =
+  target: 'node'
   entry:
-    style: './src/main.css'
-    main: './src/main.coffee'
+    container: './src/comp/container.coffee'
   output:
-    filename: '[name].js'
+    path: 'build/'
+    filename: 'container.js'
+    libraryTarget: 'commonjs2'
+  externals: Object.keys(require('./package.json').dependencies),
   module:
     loaders: [
       test: /\.coffee$/, loader: 'coffee-loader'
@@ -15,3 +20,4 @@ module.exports =
     ]
   resolve:
     extensions: ['', '.coffee', '.js']
+  plugins: []

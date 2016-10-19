@@ -16,7 +16,8 @@ gulp.task 'ssr', (cb) ->
   store = require './src/store'
   router = require './src/router'
   renderer = require('vue-server-renderer').createRenderer()
-  Container = require './src/comp/container'
+  # Container = require './src/comp/container'
+  Container = require './build/container'
   template = require './tasks/template'
   Vue.use VueRouter
 

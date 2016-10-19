@@ -13,6 +13,8 @@ module.exports =
       test: /\.coffee$/, loader: 'coffee-loader'
     ,
       test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+    ,
+      test: /\.vue$/, loader: 'vue'
     ]
   resolve:
     extensions: ['', '.coffee', '.js']
