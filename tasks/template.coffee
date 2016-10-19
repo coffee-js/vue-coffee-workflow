@@ -1,18 +1,22 @@
 
 stir = require 'stir-template'
 
-{html, body, head, div, link, script} = stir
+{html, body, head, meta, div, link, script} = stir
 
-exports.render = (appHtml, storeData) ->
+exports.render = (appHtml, storeData, settings) ->
   storeContent = JSON.stringify(storeData).replace(/"/g, '&quot;')
   stir.render stir.doctype(),
-    stir.html null,
-      stir.head null,
-        stir.script defer: true, src: 'http://localhost:8080/main.js'
+    html null,
+      head null,
+        script defer: true, src: settings.mainJs
+        if settings.env is 'prod'
+          link rel: 'stylesheet', href: settings.mainCss
+        else
+          script defer: true, src: settings.mainCss
       if storeData?
-        stir.meta id: 'store', content: storeContent
-      stir.body null,
+        meta id: 'store', content: storeContent
+      body null,
         if appHtml?
           appHtml
         else
-          stir.div id: 'app'
+          div id: 'app'

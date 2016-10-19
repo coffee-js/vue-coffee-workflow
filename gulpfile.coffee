@@ -3,13 +3,7 @@ fs = require 'fs'
 gulp = require 'gulp'
 path = require 'path'
 
-gulp.task 'html', (cb) ->
-  template = require './tasks/template'
-
-  html = template.render()
-  fs.writeFile 'build/index.html', html, (err) ->
-    if err then throw err
-    else cb()
+settings = require './tasks/settings'
 
 gulp.task 'ssr', (cb) ->
   process.env.VUE_ENV = 'server'
@@ -45,7 +39,7 @@ gulp.task 'ssr', (cb) ->
       if err?
         throw err
       else
-        html = template.render appHtml, store.state
+        html = template.render appHtml, store.state, settings
         htmlPath = path.join 'build', address
         console.log 'render entry:', htmlPath
         mkpath.sync path.dirname(htmlPath)

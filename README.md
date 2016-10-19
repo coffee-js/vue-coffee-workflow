@@ -28,9 +28,9 @@ build/page/b.html
 
 Still need works on:
 
-[ ] hot code swapping
-[ ] build with revisions
-[ ] migrate to `*.vue` files and build code
+* [x] build with revisions
+* [ ] hot code swapping
+* [ ] migrate to `*.vue` files and build code
 
 ### License
 

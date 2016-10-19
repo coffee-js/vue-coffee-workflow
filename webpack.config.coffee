@@ -1,11 +1,15 @@
 
 module.exports =
-  entry: './src/main.coffee'
+  entry:
+    style: './src/main.css'
+    main: './src/main.coffee'
   output:
-    filename: 'main.js'
+    filename: '[name].js'
   module:
     loaders: [
       test: /\.coffee$/, loader: 'coffee-loader'
+    ,
+      test: /\.css$/, loader: 'style!css'
     ]
   resolve:
     extensions: ['', '.coffee', '.js']
