@@ -5,7 +5,7 @@ Vue CoffeeScript Workflow
 > Templating is tricky, use language based DSL.
 
 This project demonstrates writing Vue.js 2 in plain CoffeeScript.
-The goal is to find a eas solution to render HTML during building.
+The goal is to find an easy solution to render HTML during building.
 
 ### Usage
 
@@ -18,7 +18,7 @@ webpack-dev-server --hot --inline
 
 Open `build/index.html` to debug.
 
-There are actually 3 entries, and I 'm trying to make it isomorphic:
+There are actually 3 entries, and I'm trying to make it isomorphic:
 
 ```text
 build/index.html
@@ -36,7 +36,7 @@ env=prod gulp ssr
 
 ### TODO
 
-Still need works on:
+Still need to work on:
 
 * [x] build with revisions
 * [x] support `*.vue` files and build code
